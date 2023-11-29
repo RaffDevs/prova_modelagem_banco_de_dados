@@ -408,3 +408,27 @@ WHERE id = 1;
 
 ````
 
+### Endereço
+![CRUD_ENDERECO](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/e7d144fb-3ebd-4adc-b394-11b43fd0fed3)
+
+### DISCIPLINA
+![CRUD_DISCIPLINA](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/d0274d35-1132-45f9-b5f8-fbc8f3734640)
+
+### ALUNO
+![CRUD_ALUNO](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/3b66e2ec-e627-44b4-a373-db9e40ada1ae)
+
+### NOTA
+![CRUD_NOTA](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/f515e8a5-c88c-4018-83dd-20f89ef7f24b)
+
+### RESPONSAVEL
+![CRUD_RESPONSAVEL](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/6dd0e1e0-a830-4789-b69f-8e58d34e180d)
+
+### TELEFONE
+![CRUD_TELEFONE](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/1d9c77e2-aaf4-4106-87d6-8c33cf68649c)
+
+### TURMA 
+![CRUD_TURMA](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/508e6216-57ab-4ff5-9e88-474b9fbce1d3)
+
+
+
+
