@@ -273,5 +273,138 @@ VALUES
 ![INSERT_TURMA](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/95a5f50a-5e9e-41e9-bac4-eae72e561596)
 
 
+# CRUD
 
+````
+# ------ ENDERECO --------- #
+
+-- Create (INSERT)
+INSERT INTO Endereco (rua, bairro, numero, cep)
+VALUES ('Rua A', 'Bairro 1', '123', '12345-678');
+
+-- Update (UPDATE)
+UPDATE Endereco
+SET rua = 'Fatequei Legalzim'
+WHERE id = 23;
+
+-- Delete (DELETE)
+DELETE FROM Endereco
+WHERE id = 24;
+
+-- Read (SELECT)
+SELECT * FROM Endereco;
+
+# ------ DISCIPLINA --------- #
+
+-- Create (INSERT)
+INSERT INTO Disciplina (nome)
+VALUES ('Programação em Assembly');
+
+-- Update (UPDATE)
+UPDATE Disciplina
+SET nome = 'Curso de VIM'
+WHERE id = 20;
+
+-- Delete (DELETE)
+DELETE FROM Disciplina
+WHERE id = 1;
+
+-- Read (SELECT)
+SELECT * FROM Disciplina;
+
+
+# ------ RESPONSAVEL --------- #
+
+-- Create (INSERT)
+INSERT INTO Responsavel (nome_completo, data_de_nascimento, endereco_id)
+VALUES ('João Silva', '1980-01-01', 4);
+
+-- Read (SELECT)
+SELECT * FROM Responsavel;
+
+-- Update (UPDATE)
+UPDATE Responsavel
+SET nome_completo = 'joãozim ZN'
+WHERE id = 19;
+
+-- Delete (DELETE)
+DELETE FROM Responsavel
+WHERE id = 25;
+
+
+# ------ ALUNO --------- #
+
+-- Create (INSERT)
+INSERT INTO Aluno (nome_completo, data_de_nascimento, endereco_id, responsavel_id, turma_id)
+VALUES ('Maria da Silva', '2000-01-01', 1, 1, 1);
+
+-- Update (UPDATE)
+UPDATE Aluno
+SET nome_completo = 'Novo Nome'
+WHERE id = 1;
+
+-- Delete (DELETE)
+DELETE FROM Aluno
+WHERE id = 1;
+
+-- Read (SELECT)
+SELECT * FROM Aluno;
+
+
+# ------ TELEFONE --------- #
+
+-- Create (INSERT)
+INSERT INTO Telefone (numero, responsavel_id)
+VALUES ('123456789', 1);
+
+-- Update (UPDATE)
+UPDATE Telefone
+SET numero = '987654321'
+WHERE id = 1;
+
+-- Delete (DELETE)
+DELETE FROM Telefone
+WHERE id = 1;
+
+-- Read (SELECT)
+SELECT * FROM Telefone;
+
+# ------ TURMA --------- #
+
+-- Create (INSERT)
+INSERT INTO Turma (periodo, curso, disciplina_id)
+VALUES (1, 'Engenharia', 1);
+
+-- Read (SELECT)
+SELECT * FROM Turma;
+
+-- Update (UPDATE)
+UPDATE Turma
+SET curso = 'Novo Curso'
+WHERE id = 1;
+
+-- Delete (DELETE)
+DELETE FROM Turma
+WHERE id = 1;
+
+# ------ NOTA --------- #
+
+-- Create (INSERT)
+INSERT INTO Nota (valor, disciplina_id, aluno_id)
+VALUES (90, 1, 1);
+
+-- Read (SELECT)
+SELECT * FROM Nota;
+
+-- Update (UPDATE)
+UPDATE Nota
+SET valor = 95
+WHERE id = 1;
+
+-- Delete (DELETE)
+DELETE FROM Nota
+WHERE id = 1;
+
+
+````
 
