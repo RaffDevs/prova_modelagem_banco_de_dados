@@ -431,4 +431,95 @@ WHERE id = 1;
 
 
 
+# Relatorios
+
+````
+SELECT Aluno.nome_completo AS NomeAluno, Responsavel.nome_completo AS NomeResponsavel
+FROM Aluno
+JOIN Responsavel ON Aluno.responsavel_id = Responsavel.id;
+````
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/e163f67e-a380-422f-95d1-abbb6ba189b9)
+
+
+
+````
+SELECT Disciplina.nome AS NomeDisciplina, Turma.curso AS CursoTurma
+FROM Disciplina
+JOIN Turma ON Disciplina.turma_id = Turma.id;
+````
+
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/aa3c094a-b063-448a-ac30-13430d8d1232)
+
+
+
+````
+SELECT Aluno.nome_completo AS NomeAluno, Nota.valor AS Nota
+FROM Aluno
+JOIN Nota ON Aluno.id = Nota.aluno_id
+WHERE Nota.disciplina_id = 1;
+````
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/7d37916c-b46a-43c0-a127-f243d8c1d2f3)
+
+
+````
+SELECT Responsavel.nome_completo AS NomeResponsavel, Telefone.numero AS NumeroTelefone
+FROM Responsavel
+JOIN Telefone ON Responsavel.id = Telefone.responsavel_id;
+
+````
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/65c2dbbe-4d2e-462c-84d6-3ad6b5320178)
+
+
+````
+SELECT Aluno.nome_completo AS NomeAluno, Turma.curso AS CursoTurma
+FROM Aluno
+JOIN Turma ON Aluno.turma_id = Turma.id
+WHERE Turma.id = 1; -- Substitua 1 pelo ID da turma desejada.
+
+
+````
+
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/c5bd8190-2cb2-4bd7-8d80-e395302867f2)
+
+
+
+`````
+SELECT nome_completo AS NomeAluno, data_de_nascimento
+FROM Aluno
+ORDER BY data_de_nascimento;
+
+`````
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/30fd9e93-c3fb-41ab-ac07-b74257cdc45c)
+
+
+````
+SELECT DISTINCT Responsavel.nome_completo AS NomeResponsavel
+FROM Responsavel
+JOIN Aluno ON Responsavel.id = Aluno.responsavel_id
+JOIN Nota ON Aluno.id = Nota.aluno_id
+WHERE Nota.valor > 90;
+
+````
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/eeae41ce-136b-4dae-b27c-94ef6f88c9f5)
+
+
+````
+
+SELECT Disciplina.nome AS NomeDisciplina, COUNT(DISTINCT Turma.id) AS NumTurmas
+FROM Disciplina
+JOIN Turma ON Disciplina.turma_id = Turma.id
+GROUP BY Disciplina.nome
+HAVING COUNT(DISTINCT Turma.id) > 1;
+
+````
+
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/df005669-af2b-44d8-a8ae-e34ba929284e)
+
+
+````
+SELECT Aluno.nome_completo AS NomeAluno, Telefone.numero AS NumeroTelefone
+FROM Aluno
+JOIN Telefone ON Aluno.responsavel_id = Telefone.responsavel_id;
+````
+![image](https://github.com/RaffDevs/prova_modelagem_banco_de_dados/assets/56967435/04f45157-ca25-47ee-b6c0-e0d4e26dd474)
 
